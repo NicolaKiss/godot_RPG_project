@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://o44ywriklfg2"]
+
+[ext_resource type="PackedScene" uid="uid://fcbaljhp28bj" path="res://assets/architecture/ARENA_BUILD.fbx" id="1_0xxlu"]
+[ext_resource type="Texture2D" uid="uid://dkhkt2hvot4bd" path="res://assets/architecture/PILLER_COLOUR.png" id="2_ylorm"]
+[ext_resource type="Texture2D" uid="uid://ieqrngf6fpnk" path="res://assets/architecture/PILLER_HIGHT.png" id="3_pru53"]
+[ext_resource type="Texture2D" uid="uid://b0laprjvxgncc" path="res://assets/architecture/PILLER_ARM.png" id="4_a7a2r"]
+[ext_resource type="Texture2D" uid="uid://cm1j32gs6fslr" path="res://assets/architecture/PILLER_NORMAL.png" id="5_r0xqe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubq24"]
+albedo_texture = ExtResource("2_ylorm")
+metallic = 1.0
+metallic_texture = ExtResource("4_a7a2r")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("4_a7a2r")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_scale = 3.99
+normal_texture = ExtResource("5_r0xqe")
+heightmap_texture = ExtResource("3_pru53")
+
+[node name="ARENA_BUILD" instance=ExtResource("1_0xxlu")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="correct_ modeling_003" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_ubq24")
